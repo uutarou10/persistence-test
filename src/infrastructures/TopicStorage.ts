@@ -47,7 +47,7 @@ class TopicStorage implements TopicRepository {
   private convertObjectToDao(topic: Topic): TopicDao {
     return {
       id: topic.id,
-      title: topic.titele,
+      title: topic.title,
       tags: topic.tags
     }
   }
