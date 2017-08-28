@@ -1,8 +1,8 @@
 import Tag from "../models/Tag";
 
 interface TagRepository {
-  getTag(id: number): Tag;
-  setTag(tag: Tag): boolean;
+  getTag(id: number): Promise<Tag>;
+  setTag(tag: Tag): Promise<void>;
 }
 
 export default TagRepository;

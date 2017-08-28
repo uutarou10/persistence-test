@@ -1,11 +1,11 @@
 import Topic from "../models/Topic";
 
 interface TopicRepository {
-  getTopic(id: number): Topic;
-  setTopic(topic: Topic): boolean;
+  getTopic(id: number): Promise<Topic>;
+  setTopic(topic: Topic): Promise<void>;
 
   // トピックを全件取得する
-  getAllTopics(): Topic[];
+  getAllTopics(): Promise<Array<Topic>>;
 }
 
 export default TopicRepository;

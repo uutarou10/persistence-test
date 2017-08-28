@@ -1,10 +1,13 @@
+import Topic from "./Topic";
+import Tag from "./Tag";
+
 export default class User {
   constructor(
     readonly id: number | undefined,
     readonly name: string,
-    readonly lovedTopics: Array<number>,
-    readonly myTopics:Array<number>,
-    readonly tags:Array<number>) {
+    readonly lovedTopics: Array<Topic>,
+    readonly myTopics:Array<Topic>,
+    readonly tags:Array<Tag>) {
 
   }
 
@@ -16,15 +19,15 @@ export default class User {
     return this.name;
   }
 
-  public getLovedTopics(): Array<number> {
+  public getLovedTopics(): Array<Topic> {
     return this.lovedTopics;
   }
 
-  public getMyTopics(): Array<number> {
+  public getMyTopics(): Array<Topic> {
     return this.myTopics;
   }
 
-  public getTags(): Array<number> {
+  public getTags(): Array<Tag> {
     return this.tags;
   }
 }
